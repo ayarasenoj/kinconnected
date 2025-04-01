@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Case Studies | KinConnected</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <style>
+    body {
+      background: #fefaf3;
+      color: #3b2f2f;
+      font-family: 'Source Sans Pro', sans-serif;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      text-align: center;
+      margin: 40px 0 20px;
+      font-size: 2.5em;
+    }
+
+    .swiper {
+      width: 90%;
+      max-width: 900px;
+      margin: 0 auto 60px;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 1em;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    .slide-img {
+      width: 100%;
+      height: auto;
+      max-height: 500px;
+      object-fit: cover;
+    }
+
+    .slide-text {
+      padding: 20px;
+      font-size: 1em;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #b76e79;
+    }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-bottom: 40px;
+      color: #6b2e2e;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    @media screen and (max-width: 600px) {
+      h1 {
+        font-size: 1.8em;
+      }
+
+      .slide-text {
+        font-size: 0.95em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Real Stories. Reconnected Roots.</h1>
+
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <!-- Slide 1 -->
+      <div class="swiper-slide">
+        <img src="case1.jpg" alt="Case Study 1" class="slide-img" />
+        <div class="slide-text">
+          <h2>Case #1</h2>
+          <p>We helped Janessa find her mother’s long-lost half-brother through DNA and social media sleuthing—restoring a connection that spanned generations.</p>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="swiper-slide">
+        <img src="case2.jpg" alt="Case Study 2" class="slide-img" />
+        <div class="slide-text">
+          <h2>Case #2</h2>
+          <p>Using only a cousin DNA match and a name, we traced a client’s biological father—leading to siblings they never knew existed.</p>
+        </div>
+      </div>
+
+      <!-- Add more slides as needed -->
+    </div>
+
+    <!-- Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+
+  <a href="index.html" class="back-link">← Back to Home</a>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+</body>
+</html>
