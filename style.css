@@ -24,6 +24,12 @@ h1, h2, h3 {
   text-align: center;
 }
 
+.tagline {
+  font-size: 1.2em;
+  font-style: italic;
+  margin-top: 10px;
+}
+
 .hero-content .button {
   display: inline-block;
   margin-top: 20px;
