@@ -122,3 +122,15 @@ footer {
 .navbar a:hover {
   color: #d4af7f;
 }
+
+.slide-text h2 {
+  font-family: 'Playfair Display', serif;
+  color: #b76e79;
+  margin-bottom: 10px;
+}
+
+.slide-text p {
+  font-style: italic;
+  font-size: 1.05em;
+  color: #3b2f2f;
+}
