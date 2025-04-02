@@ -29,32 +29,34 @@
 
     .swiper-slide {
       text-align: center;
-      font-size: 1em;
       background: #fff;
       border-radius: 10px;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
       overflow: hidden;
     }
 
+    .slide-image-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+    }
+
     .slide-img {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
-  margin: 0 auto;
-  display: block;
-  border-bottom: 4px solid #d4af7f;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+      width: 100%;
+      max-width: 800px;
+      height: auto;
+      object-fit: contain;
+      border: 1px solid #e4dcd2;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-.slide-img:hover {
-  transform: scale(1.015);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-    .slide-text {
-      padding: 20px;
-      font-size: 1em;
+    .slide-img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+      cursor: zoom-in;
     }
 
     .swiper-button-next,
@@ -71,103 +73,81 @@
       font-weight: bold;
     }
 
+    nav.navbar {
+      background: #3b2f2f;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    nav.navbar ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav.navbar a {
+      color: #fefaf3;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    nav.navbar a:hover {
+      color: #d4af7f;
+    }
+
     @media screen and (max-width: 600px) {
       h1 {
         font-size: 1.8em;
       }
 
-      .slide-text {
-        font-size: 0.95em;
+      .slide-img {
+        max-height: 300px;
       }
     }
-
-    @media screen and (max-width: 600px) {
-  .swiper {
-    width: 95%;
-  }
-
-  .slide-img {
-    max-height: 300px;
-  }
-
-  .slide-text {
-    padding: 15px;
-    font-size: 0.95em;
-  }
-}
-
-    .slide-img:hover {
-  transform: scale(1.5);
-  z-index: 2;
-  position: relative;
-}
   </style>
 </head>
 <body>
-
   <nav class="navbar">
-  <ul>
-    <li><a href="index.html#about">About</a></li>
-    <li><a href="case-studies.html">Case Studies</a></li>
-    <li><a href="index.html#services">Services</a></li>
-    <li><a href="index.html#contact">Contact</a></li>
-  </ul>
-</nav>
+    <ul>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="case-studies.html">Case Studies</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
 
   <h1>Real Stories. Reconnected Roots.</h1>
 
-  <div class="swiper-slide">
-  <div class="slide-paper">
-    <h2>KinConnected Case Study: JP</h2>
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <!-- Slide 1 -->
+      <div class="swiper-slide">
+        <div class="slide-image-wrapper">
+          <a href="JM-case.png" target="_blank">
+            <img src="JM-case.png" alt="KinConnected Case Study: JM" class="slide-img" />
+          </a>
+        </div>
+      </div>
 
-    <h3 style="margin-bottom: 0;">The Mission</h3>
-    <p style="margin-top: 2px;">JP had spent his entire life not knowing who his biological father was. The only information he had was a possible name—vague and unconfirmed—and his AncestryDNA results. His mother wasn’t forthcoming, and traditional conversations had led nowhere. His goal wasn’t just to find a name, but to connect with his roots, understand where he came from, and, if possible, meet any siblings he might have.</p>
-
-    <h3 style="margin-bottom: 0;">The Challenge</h3>
-    <p style="margin-top: 2px;">This case came with deep emotional weight and very limited starting data. Aside from the DNA test and a single potential name, there were no confirmed connections, no family tree on his father’s side, and no guidance from immediate family. The emotional sensitivity around the topic added pressure to make sure every step was respectful, accurate, and careful.</p>
-
-    <h3 style="margin-bottom: 0;">The Process</h3>
-    <p style="margin-top: 2px;">I started by analyzing JP’s DNA matches on Ancestry, focusing on the closest paternal-side relatives—primarily second and third cousins. I used shared matches, surnames, and tree-building to trace common ancestors. As I followed the strongest DNA trails, I constructed multiple possible trees until one branch consistently aligned with the DNA connections and the potential name JP had heard growing up.</p>
-
-    <p>From there, I began researching potential sons from that branch, zeroing in on one man who matched both the name and the generational timeline. I located his social media, photos, and family members—and began to build a case for this man being JP’s biological father.</p>
-
-    <h3 style="margin-bottom: 0;">The Breakthrough</h3>
-    <p style="margin-top: 2px;">The confirmation came not from guesswork, but from shared sibling matches and direct communication. Once contact was made, the man’s children were open and welcoming. They quickly bonded with JP, and after additional DNA testing between them, it was confirmed: he had found his father’s side—and his siblings.</p>
-
-    <h3 style="margin-bottom: 0;">The Outcome</h3>
-    <p style="margin-top: 2px;">JP is now in touch with his biological father’s family and forming relationships with siblings he never knew he had. There’s been bonding, laughter, photos shared, and a sense of belonging that had been missing for decades. DNA testing confirmed what love and intuition already told us—he is exactly where he belongs now.</p>
-  </div>
-</div>
       <!-- Slide 2 -->
       <div class="swiper-slide">
-  <div class="slide-paper">
-    <h2>KinConnected Case Study: JM</h2>
-
-    <h3 style="margin-bottom: 0;">The Mission</h3>
-    <p style="margin-top: 2px;">JM was seeking information about her maternal grandfather’s biological family. She needed this knowledge to complete her medical history as part of the egg donation process. Her goal was to identify any living relatives who could provide background information and bring clarity to a long-standing family mystery.</p>
-
-    <h3 style="margin-bottom: 0;">The Challenge</h3>
-    <p style="margin-top: 2px;">JM had no contact with her grandfather’s side of the family and very little verified information to go on. There were gaps in the family tree, no DNA results to assist the search, and no clear connections to build from. The only available details were based on sparse family knowledge and scattered historical records.</p>
-
-    <h3 style="margin-bottom: 0;">The Process</h3>
-    <p style="margin-top: 2px;">I began by examining the few details JM had about her grandfather, focusing on possible names, locations, and timeframes. I researched census records, marriage and death certificates, obituaries, and public directories to begin constructing the most likely branches of her family tree.</p>
-
-    <p>As I worked, a pattern emerged within a specific sibling group tied to her grandfather’s likely identity. I traced this family through multiple generations, carefully verifying each connection with public records. Eventually, I identified a man who appeared to be her grandfather’s son—potentially JM's uncle or her mother’s half-brother.</p>
-
-    <h3 style="margin-bottom: 0;">The Breakthrough</h3>
-    <p style="margin-top: 2px;">The breakthrough came when I confirmed that this man shared consistent connections with several other relatives in the same family line. From there, I was able to locate living descendants of her grandfather’s siblings and identify social media profiles JM could use to reach out directly.</p>
-
-    <h3 style="margin-bottom: 0;">The Outcome</h3>
-    <p style="margin-top: 2px;">JM now has a clear, well-researched understanding of her maternal grandfather’s biological family, including the names of potential living relatives. This has given her the opportunity to complete her medical history with confidence and opens the door to future connection, if and when she chooses.</p>
-  </div>
-</div>
+        <div class="slide-image-wrapper">
+          <a href="JP-case.png" target="_blank">
+            <img src="JP-case.png" alt="KinConnected Case Study: JP" class="slide-img" />
+          </a>
+        </div>
+      </div>
+    </div>
 
     <!-- Arrows -->
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
   </div>
 
-  <a href="index.html" class="back-link">← Back to Home</a>
+  <a href="index.html" class="back-link">&larr; Back to Home</a>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
