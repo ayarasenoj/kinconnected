@@ -6,71 +6,12 @@
   <title>Case Studies | KinConnected</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <style>
     body {
+      margin: 0;
       background: #fefaf3;
-      color: #3b2f2f;
       font-family: 'Source Sans Pro', sans-serif;
-    }
-
-    h1 {
-      font-family: 'Playfair Display', serif;
-      text-align: center;
-      margin: 40px 0 20px;
-      font-size: 2.5em;
-    }
-
-    .swiper {
-      width: 90%;
-      max-width: 900px;
-      margin: 0 auto 60px;
-    }
-
-    .swiper-slide {
-      text-align: center;
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-    }
-
-    .slide-image-wrapper {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 30px;
-    }
-
-    .slide-img {
-      width: 100%;
-      max-width: 800px;
-      height: auto;
-      object-fit: contain;
-      border: 1px solid #e4dcd2;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .slide-img:hover {
-      transform: scale(1.03);
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
-      cursor: zoom-in;
-    }
-
-    .swiper-button-next,
-    .swiper-button-prev {
-      color: #b76e79;
-    }
-
-    .back-link {
-      display: block;
-      text-align: center;
-      margin-bottom: 40px;
-      color: #6b2e2e;
-      text-decoration: none;
-      font-weight: bold;
+      color: #3b2f2f;
     }
 
     nav.navbar {
@@ -98,27 +39,58 @@
       color: #d4af7f;
     }
 
-    @media screen and (max-width: 600px) {
-      h1 {
-        font-size: 1.8em;
-      }
+    h1 {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5em;
+      margin: 40px 0 20px;
+    }
 
-      .slide-img {
-        max-height: 300px;
+    .case-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      padding: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .case-card {
+      background: #fffaf5;
+      padding: 40px 20px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.2em;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+      border: none;
+    }
+
+    .case-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .case1 { background: #f6e6dc; color: #6b2e2e; }
+    .case2 { background: #e8d2d1; color: #3b2f2f; }
+    .case3 { background: #e5cbb0; color: #3b2f2f; }
+    .case4 { background: #f3e0c9; color: #6b2e2e; }
+    .case5 { background: #d4af7f; color: #3b2f2f; }
+    .case6 { background: #f7e9dd; color: #3b2f2f; }
+
+    @media screen and (max-width: 900px) {
+      .case-grid {
+        grid-template-columns: 1fr 1fr;
       }
     }
 
-    .swiper-slide {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.swiper-slide-active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
+    @media screen and (max-width: 600px) {
+      .case-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
@@ -126,50 +98,26 @@
     <ul>
       <li><a href="index.html#about">About</a></li>
       <li><a href="case-studies.html">Case Studies</a></li>
-      <li><a href="services.html">Services</a>
+      <li><a href="services.html">Services</a></li>
       <li><a href="index.html#contact">Contact</a></li>
     </ul>
   </nav>
 
-  <h1>Real Stories. Reconnected Roots.</h1>
+  <h1>Client Success Stories</h1>
 
-  <div class="swiper">
-    <div class="swiper-wrapper">
-      <!-- Slide 1 -->
-      <div class="swiper-slide">
-        <div class="slide-image-wrapper">
-          <a href="JM-case.png" target="_blank">
-            <img src="JM-case.png" alt="KinConnected Case Study: JM" class="slide-img" />
-          </a>
-        </div>
-      </div>
+  <section class="case-grid">
+    <button class="case-card case1" onclick="openStory(1)">Case #1</button>
+    <button class="case-card case2" onclick="openStory(2)">Case #2</button>
+    <button class="case-card case3" onclick="openStory(3)">Case #3</button>
+    <button class="case-card case4" onclick="openStory(4)">Case #4</button>
+    <button class="case-card case5" onclick="openStory(5)">Case #5</button>
+    <button class="case-card case6" onclick="openStory(6)">Case #6</button>
+  </section>
 
-      <!-- Slide 2 -->
-      <div class="swiper-slide">
-        <div class="slide-image-wrapper">
-          <a href="JP-case.png" target="_blank">
-            <img src="JP-case.png" alt="KinConnected Case Study: JP" class="slide-img" />
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Arrows -->
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-  </div>
-
-  <a href="index.html" class="back-link">&larr; Back to Home</a>
-
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
-    const swiper = new Swiper('.swiper', {
-      loop: true,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
+    function openStory(num) {
+      window.location.href = `case${num}.html`;
+    }
   </script>
 </body>
 </html>
