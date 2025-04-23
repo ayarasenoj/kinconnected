@@ -91,6 +91,45 @@
         grid-template-columns: 1fr;
       }
     }
+
+    /* MODAL STYLES */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .modal-content {
+      background-color: #fffaf5;
+      margin: 10% auto;
+      padding: 30px;
+      border: 1px solid #e0d9ce;
+      width: 90%;
+      max-width: 600px;
+      border-radius: 12px;
+      position: relative;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    }
+
+    .close {
+      position: absolute;
+      top: 12px;
+      right: 20px;
+      color: #6b2e2e;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .close:hover {
+      color: #d4af7f;
+    }
   </style>
 </head>
 <body>
@@ -106,18 +145,46 @@
   <h1>Client Success Stories</h1>
 
   <section class="case-grid">
-    <button class="case-card case1" onclick="openStory(1)">Case #1</button>
-    <button class="case-card case2" onclick="openStory(2)">Case #2</button>
-    <button class="case-card case3" onclick="openStory(3)">Case #3</button>
-    <button class="case-card case4" onclick="openStory(4)">Case #4</button>
-    <button class="case-card case5" onclick="openStory(5)">Case #5</button>
-    <button class="case-card case6" onclick="openStory(6)">Case #6</button>
+    <button class="case-card case1" onclick="openModal('modal1')">Case #1</button>
+    <button class="case-card case2" onclick="openModal('modal2')">Case #2</button>
+    <button class="case-card case3" onclick="openModal('modal3')">Case #3</button>
+    <button class="case-card case4" onclick="openModal('modal4')">Case #4</button>
+    <button class="case-card case5" onclick="openModal('modal5')">Case #5</button>
+    <button class="case-card case6" onclick="openModal('modal6')">Case #6</button>
   </section>
 
+  <!-- Example Modal for Case #1 -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal1')">&times;</span>
+      <h2>Case #1: Reuniting a Daughter with Her Maternal Roots</h2>
+      <p>
+        Using only a few DNA matches and a family nickname, we uncovered an entire maternal line, helped our client connect with cousins she never knew she had, and confirmed her biological grandfather’s identity.
+      </p>
+    </div>
+  </div>
+
+  <!-- You can duplicate this modal block and change modal ID + content for cases 2–6 -->
+
   <script>
-    function openStory(num) {
-      window.location.href = `case${num}.html`;
+    function openModal(id) {
+      document.getElementById(id).style.display = 'block';
     }
+
+    function closeModal(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+
+    // Optional: Close modal on outside click
+    window.onclick = function(event) {
+      const modals = document.querySelectorAll('.modal');
+      modals.forEach(modal => {
+        if (event.target === modal) {
+          modal.style.display = "none";
+        }
+      });
+    };
   </script>
 </body>
 </html>
+
