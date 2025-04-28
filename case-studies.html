@@ -59,19 +59,19 @@
 
 
     .case-card {
-  width: 192px;
-  height: 192px;
+  width: 384px;
+  height: 384px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #fffaf5;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  background: #f9f4e8; /* parchment-like */
+  border-radius: 6px; /* much squarer now */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
   font-weight: bold;
-  font-size: 1.2em;
+  font-size: 1.5em;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.3s ease;
-  border: none;
+  border: 1px solid #e0d9ce; /* thin 'paper edge' */
   text-align: center;
   padding: 20px;
 }
@@ -82,12 +82,13 @@
       box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
     }
 
-    .case1 { background: #f6e6dc; color: #6b2e2e; }
-    .case2 { background: #e8d2d1; color: #3b2f2f; }
-    .case3 { background: #e5cbb0; color: #3b2f2f; }
-    .case4 { background: #f3e0c9; color: #6b2e2e; }
-    .case5 { background: #d4af7f; color: #3b2f2f; }
-    .case6 { background: #f7e9dd; color: #3b2f2f; }
+    .case1 { background: #f9f4e8; color: #6b2e2e; }
+.case2 { background: #f3e9d2; color: #3b2f2f; }
+.case3 { background: #f5eddc; color: #3b2f2f; }
+.case4 { background: #fdf6e3; color: #6b2e2e; }
+.case5 { background: #f7e7c9; color: #3b2f2f; }
+.case6 { background: #f8f1e5; color: #3b2f2f; }
+
 
     @media screen and (max-width: 900px) {
       .case-grid {
@@ -163,6 +164,10 @@
       font-size: 1.05em;
       line-height: 1.6;
     }
+
+    background-image: url('images/parchment-texture1.png');
+background-size: cover;
+
   </style>
 </head>
 <body>
